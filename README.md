@@ -21,7 +21,7 @@ It is part of the same project as the rest of my de-Googling work: my tools, on 
 
 ## Status
 
-Project setup. The work is filed as issues, assigned, and scheduled into sprints (see Milestones). The host decision is made: the local server (issue #4). No code yet -- the architecture decisions in issue #1 come first.
+Sprint 1 -- Foundations is in progress: the browser core is standing up on the local server. The architecture decisions are recorded in [docs/architecture.md](docs/architecture.md). The work is filed as issues, assigned, and scheduled into sprints (see Milestones). The host decision is made: the local server (issue #4).
 
 ## The plan
 
