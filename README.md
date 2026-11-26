@@ -8,20 +8,20 @@ A small Gecko-based browser that Muse can drive over the internet -- through my 
 
 ## What this is
 
-muse-browser is not a new browser engine. It is a thin control layer around Gecko: a small daemon that owns dedicated per-engine profiles and exposes a token-authenticated control API. It offers three Gecko releases -- Mozilla Firefox, GNU IceCat (the default track), and Mozilla Firefox ESR. Muse connects to that API over my tailnet and can navigate, read pages, click, type, and take screenshots -- a real browser, on my machine, under my rules.
+muse-browser is not a new browser engine. It is a thin control layer around Gecko: a small daemon that owns dedicated per-engine profiles and exposes a token-authenticated control API. It offers three Gecko releases -- Mozilla Firefox, GNU IceCat, and Mozilla Firefox ESR (the default track). Muse connects to that API over my tailnet and can navigate, read pages, click, type, and take screenshots -- a real browser, on my machine, under my rules.
 
 It is part of the same project as the rest of my de-Googling work: my tools, on my hardware, with no GMS in the loop.
 
 ## How it works
 
-- The daemon runs on my local server (natalie-server) and supervises one dedicated profile per engine track -- never my daily-driver profile. The active track is a config choice; IceCat is the default.
+- The daemon runs on my local server (natalie-server) and supervises one dedicated profile per engine track -- never my daily-driver profile. The active track is a config choice; Firefox ESR is the default.
 - The control API binds to the Tailscale interface only. Never the public internet, never 0.0.0.0.
 - Every API call requires the token. The daemon never stores passwords.
 - The profile persists, so signed-in sessions survive restarts.
 
 ## Status
 
-Sprint 1 -- Foundations is in progress: the browser core is standing up on the local server. The architecture decisions are recorded in [docs/architecture.md](docs/architecture.md). The work is filed as issues, assigned, and scheduled into sprints (see Milestones). The host decision is made: the local server (issue #4). The browser core now offers three engine tracks (issue #2): Firefox 161.0, IceCat 60.7.0 (the default), and Firefox ESR 153.8.0 -- each smoke-tested end to end. A manually triggered GitHub Actions smoke test (workflow_dispatch, pick the engine) is filed on the Sprint 1 branch; it becomes triggerable once the branch is merged.
+Sprint 1 -- Foundations is in progress: the browser core is standing up on the local server. The architecture decisions are recorded in [docs/architecture.md](docs/architecture.md). The work is filed as issues, assigned, and scheduled into sprints (see Milestones). The host decision is made: the local server (issue #4). The browser core now offers three engine tracks (issue #2): Firefox 161.0, IceCat 60.7.0, and Firefox ESR 153.8.0 (the default) -- each smoke-tested end to end. A manually triggered GitHub Actions smoke test (workflow_dispatch, pick the engine) is filed on the Sprint 1 branch; it becomes triggerable once the branch is merged.
 
 ## The plan
 

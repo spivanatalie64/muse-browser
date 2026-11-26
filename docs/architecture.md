@@ -27,7 +27,7 @@ Normal firefox, icecat, and firefox-esr." This supersedes the single-engine
 | `icecat`      | GNU IceCat      | `~/muse-browser/icecat/icecat`       | `~/muse-browser/profiles/icecat`      |
 | `firefox-esr` | Mozilla Firefox ESR | `~/muse-browser/firefox-esr/firefox` | `~/muse-browser/profiles/firefox-esr` |
 
-- **Default track: `icecat`.**
+- **Default track: `firefox-esr`.** (Was `icecat` for the first hours of 2026-11-25. Natalie changed the default to Firefox ESR the same day, after the IceCat findings below: a 2019 engine that only runs with its content sandbox off does not get to be the default. IceCat remains an offered track.)
 - Per-engine profiles are deliberate: engine families must not share a
   profile. The Sprint 1 profile was migrated to `profiles/firefox`.
 - Selection is by config: `~/muse-browser/config.json` holds
@@ -42,7 +42,7 @@ Normal firefox, icecat, and firefox-esr." This supersedes the single-engine
   capabilities (that is the protocol's name for the Gecko family;
   geckodriver reports the real `browserName` back, e.g. `"icecat"`).
 
-### IceCat notes (the default track is the old engine)
+### IceCat notes (the old engine)
 
 - Installed version is **60.7.0** -- the newest release GNU publishes.
   Checked 2026-11-25: `ftp.gnu.org/gnu/gnuzilla/` tops out at 60.7.0, and
@@ -108,7 +108,7 @@ firefox-esr/  Firefox ESR tarball install    (track firefox-esr)
 bin/          geckodriver
 lib/          user-space libs an engine needs (libdbus-glib, for IceCat)
 profiles/     one dedicated profile per track: firefox, icecat, firefox-esr
-config.json   {"track": "icecat"} -- the active track choice
+config.json   {"track": "firefox-esr"} -- the active track choice
 daemon/       muse_browserd.py, deployed copy
 tests/        smoke test, deployed copy
 logs/         geckodriver log, per-track smoke logs
@@ -144,7 +144,7 @@ issue #3.
   installed at `~/muse-browser/firefox` -- track `firefox`
 - GNU IceCat **60.7.0** (official GNU tarball, en-US, gnulinux-x86_64;
   sha256 cross-verified between two GNU mirrors, see above),
-  installed at `~/muse-browser/icecat` -- track `icecat`, the default
+  installed at `~/muse-browser/icecat` -- track `icecat`
 - Mozilla Firefox ESR **153.8.0esr** (official Mozilla tarball, linux64,
   en-US), installed at `~/muse-browser/firefox-esr` -- track `firefox-esr`
 - geckodriver **0.37.1** (Mozilla's official GitHub releases),
