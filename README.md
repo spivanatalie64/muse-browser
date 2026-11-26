@@ -2,6 +2,7 @@
 
 > **Personal project -- built only for Natalie Cole-Clift. Not for distribution.**
 > This exists because of Google Mobile Services (GMS) tracking: it is part of getting one person's phone off GMS. It is not a product, and it is not made for anyone else.
+> The repository is left public, effectively as a template: if you want a starting point like this for your own setup, you are welcome to use it as one.
 
 A small Gecko-based browser that Muse can drive over the internet -- through my Tailscale network, and nothing else.
 
@@ -34,3 +35,11 @@ Project setup. The work is filed as issues, assigned, and scheduled into sprints
 - Ask first: purchases, form submits with consequences, posting or sending anything as me, account changes.
 - Credentials only through approved flows; the daemon stores none.
 - Stop at account locks, rate limits, and refusals -- no routing around them.
+
+## Why this is public
+
+This repo is public on purpose -- not as a product launch, but as a template. My instance is mine: my server, my accounts, my rules. The code and the plan stay public so anyone who wants to build their own version of this can use it as a starting point.
+
+## License
+
+Apache License 2.0 -- see [LICENSE](LICENSE).
